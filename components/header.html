@@ -1,0 +1,57 @@
+<!-- components/header.html -->
+<header >
+    <nav class="pt-5 flex justify-between md:flex items-center md:p-0">
+        <!-- LOGO -->
+        <div class="w-[50vh]">
+            <a href="#" class="text-2xl font-bold px-6 bounce">
+                <span class="text-emerald-600">&lt;</span>Denshow.<span class="text-emerald-600">/&gt;</span>
+            </a>
+        </div>
+        <!--PC MENU-->
+        <div class="hidden md:flex justify-end py-3 w-full space-x-3 font-sans text-sm px-1">
+            <a href="index.html" class="py-2 px-4 hoverable hover:bg-gray-300 hover:text-emerald-600 font-bold rounded-lg active:bg-gray-200">Home</a>
+            <a href="about.html" class="py-2 px-4 hoverable hover:bg-gray-300 hover:text-emerald-600 font-bold rounded-lg">About</a>
+            <a href="projects.html" class="py-2 px-4 hoverable hover:bg-gray-300 hover:text-emerald-600 font-bold rounded-lg">Projects</a>
+            <a href="experience.html" class="py-2 px-4 hoverable hover:bg-gray-300 hover:text-emerald-600 font-bold rounded-lg">Experience</a>
+            <a href="contact.html" class="py-2 px-4 hoverable hover:bg-gray-300 hover:text-emerald-600 font-bold rounded-lg">Contact Me!</a>
+        </div>
+        <!-- MOBILE ICONS-->
+        <div class="flex space-x-5">
+            <div class="burger md:hidden" onclick="burgerUp()">
+                <svg class="burger-light-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                    <path fill="#ececec" d="M11 7h10v2H11zm-8 4h2V9h2v2h14v2H7v2H5v-2H3zm4 4v2h2v-2zm0-6V7h2v2zm14 6H11v2h10z" />
+                </svg>
+                <svg class="burger-dark-icon hidden" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                    <path fill="#080808" d="M11 7h10v2H11zm-8 4h2V9h2v2h14v2H7v2H5v-2H3zm4 4v2h2v-2zm0-6V7h2v2zm14 6H11v2h10z" />
+                </svg>
+            </div>
+            <button class="px-6" onclick="darkandlight()">
+                <svg class="light-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                    <g fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="6" />
+                        <path stroke-linecap="round" d="M12 2v1m0 18v1m10-10h-1M3 12H2" />
+                        <path stroke-linecap="round" d="m19.07 4.93l-.392.393M5.322 18.678l-.393.393m14.141-.001l-.392-.393M5.322 5.322l-.393-.393" opacity="0.5" />
+                    </g>
+                </svg>
+                <svg class="dark-icon hidden" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="m21.067 11.857l-.642-.388zm-8.924-8.924l-.388-.642zM21.25 12A9.25 9.25 0 0 1 12 21.25v1.5c5.937 0 10.75-4.813 10.75-10.75zM12 21.25A9.25 9.25 0 0 1 2.75 12h-1.5c0 5.937 4.813 10.75 10.75 10.75zM2.75 12A9.25 9.25 0 0 1 12 2.75v-1.5C6.063 1.25 1.25 6.063 1.25 12zm12.75 2.25A5.75 5.75 0 0 1 9.75 8.5h-1.5a7.25 7.25 0 0 0 7.25 7.25zm4.925-2.781A5.75 5.75 0 0 1 15.5 14.25v1.5a7.25 7.25 0 0 0 6.21-3.505zM9.75 8.5a5.75 5.75 0 0 1 2.781-4.925l-.776-1.284A7.25 7.25 0 0 0 8.25 8.5zM12 2.75a.38.38 0 0 1-.268-.118a.3.3 0 0 1-.082-.155c-.004-.031-.002-.121.105-.186l.776 1.284c.503-.304.665-.861.606-1.299c-.062-.455-.42-1.026-1.137-1.026zm9.71 9.495c-.066.107-.156.109-.187.105a.3.3 0 0 1-.155-.082a.38.38 0 0 1-.118-.268h1.5c0-.717-.571-1.075-1.026-1.137c-.438-.059-.995.103-1.299.606z" />
+                </svg>
+            </button>
+        </div>
+        <!-- MOBILE MENU -->
+        <div id="mobile-nav" class="fixed top-0 flex-col w-full md:hidden space-y-2 dark-mode h-screen hidden">
+            <div class="flex flex-col justify-center text-center space-y-2 h-full">
+                <div class="absolute top-5 right-5" id="close" onclick="closeicon()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                        <path fill="none" stroke="#ececec" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m42 42l-9-9M6 6l9 9zm0 36l9-9M42 6l-9 9zM24 29a5 5 0 1 0 0-10a5 5 0 0 0 0 10" />
+                    </svg>
+                </div>
+                <a href="index.html" class="py-2 px-4 hoverable hover:bg-gray-300 hover:text-emerald-600 font-bold text-2xl rounded-lg">Home</a>
+                <a href="about.html" class="py-2 px-4 hoverable hover:bg-gray-300 hover:text-emerald-600 font-bold text-2xl rounded-lg">About</a>
+                <a href="#" class="py-2 px-4 hoverable hover:bg-gray-300 hover:text-emerald-600 font-bold text-2xl rounded-lg">Projects</a>
+                <a href="#" class="py-2 px-4 hoverable hover:bg-gray-300 hover:text-emerald-600 font-bold text-2xl rounded-lg">Experience</a>
+                <a href="#" class="py-2 px-4 hoverable hover:bg-gray-300 hover:text-emerald-600 font-bold text-2xl rounded-lg">Contact Me!</a>
+            </div>
+        </div>
+    </nav>
+</header>
