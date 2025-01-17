@@ -21,17 +21,26 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-body.light-mode {
+body.light-mode{
     background-color: var(--lightmode);
     color: #000000;
-    
+    .contact-dark-mode{
+        background-color: rgb(239, 239, 239);
+        color: #000000;
+    }
 }
 
 body.dark-mode {
     background-color: var(--darkmode);
     background-color: var(--fallback-darkmode); 
     color: #ffffff;
+
+    .contact-dark-mode{
+        background-color: var(--darkmode);
+        color: #ffffff;
+    }
 }
+
 
 main {
     flex: 1;
