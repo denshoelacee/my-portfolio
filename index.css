@@ -6,12 +6,14 @@
     --lightmode: #ffffff;
     --fallback-darkmode : #1e1e2f;
     --hoverbutton : #10b981;
+    --backbutton : rgb(20 83 45 / var(--tw-text-opacity, 1));
 }
 
 
 * {
     margin: 0;
     padding: 0;
+    
 }
 
 body {
@@ -85,3 +87,40 @@ body.dark-mode .footers  {
 body.light-mode .footers  {
     color: #000000;
 }
+
+.custom-button {
+    box-shadow: 0 6px var(--backbutton);
+    
+}
+
+
+.custom-button:active {
+    background-color: rgb(16 185 129 / var(--tw-text-opacity, 1));
+    box-shadow: 0 3px var(--backbutton);
+    transform: translateY(3px);
+
+}
+
+.tooltipicon{
+    position: relative;
+    display: inline-block;
+}
+
+.tooltipicon .tooltipiconhidden {
+    visibility: hidden;
+    background-color: rgb(222, 221, 221);
+    color: #000000;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0%;
+    margin-left: 10px;
+    border-width: 5px;
+    border-style: solid;
+  }
+
+.tooltipicon:hover .tooltipiconhidden {
+    visibility: visible;
+  }

@@ -14,6 +14,8 @@ function loadComponent(url, elementId) {
     loadComponent('./components/about.html', 'about');
     loadComponent('./components/footer.html', 'footer');
 
+    loadComponent('./components/icons.html', 'icons');
+
     function darkandlight() { 
         var body = document.body; 
         var lightIcon = document.querySelector('.light-icon'); 
